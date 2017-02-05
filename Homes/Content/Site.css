@@ -1,0 +1,331 @@
+﻿.main {
+    background-color:#37a4f3;
+    padding-top:50px;
+    color:#ffffff;
+}
+
+.twitWrapper {
+    width : 650px;
+    align-items : center;
+    border-style : solid;
+    border-color : #fdfdfd;
+    border-width : 1px;
+    margin : 0 auto;
+    text-align:center;
+    vertical-align:top;
+    line-height:normal;
+    background-color:#fdfdfd;
+    -moz-box-shadow:  0px 0px 7px 3px rgb(128,128,128);
+    -webkit-box-shadow:  0px 0px 7px 3px rgb(128,128,128);
+    box-shadow:  0px 0px 7px 1px rgb(128,128,128);
+    padding-bottom:10px;
+    font-family:'Open Sans';
+}
+.twitImageWrapper {
+    border-style : dotted;
+    border-width : 0px;
+    margin : 15px 5px 5px 5px;
+    display:inline-block;
+    vertical-align:top;
+}
+
+.twitBodyWrapper {
+    width : 500px;
+    border-style : solid;
+    border-color : brown;
+    border-width : 0px;
+    margin : 5px 5px 5px 5px;
+    display:inline-block;
+}
+.twitUNameWrapper {
+    border-style : dotted;
+    border-width : 0px;
+    margin : 5px 0px 0x 5px;
+    display:inline-block;
+}
+
+.twitUFullNameWrapper {
+    border-style : dotted;
+    border-width : 0px;
+    margin : 5px 0px 0px 0px;
+    display:inline-block;
+}
+
+.twitTextWrapper {
+    border-style : dotted;
+    border-width : 0px;
+    margin : 5px 5px 5px 5px;
+}
+
+.twitHeadWrapper {
+    border-style : ridge;
+    border-width : 0px;
+    margin : 5px 5px 5px 5px;
+    text-align:left;
+}
+.twitContentWrapper {
+    border-style : groove;
+    border-width : 0px;
+    color:#000000;
+}
+.twitTailWrapper {
+    width:auto;
+    border-style : ridge;
+    border-width : 0px;
+    display:inline-block;
+    margin : 0 auto;
+    font-family:'Open Sans';
+    color:black;
+}
+
+.twitImage{
+    height:60px;
+    width:60px;
+    border-bottom-left-radius:29px;
+    border-bottom-right-radius:29px;
+    border-top-left-radius:29px;
+    border-top-right-radius:29px
+}
+.twitFullName{
+    font-weight:700;
+    font-size:16px;
+}
+.twituName{
+    font-size:13px;
+    font-weight:100;
+    color:rgb(128,128,128);
+}
+.twitText{
+    font-size : 12px;
+    text-align:left;
+}
+
+.btnOrg {
+	-moz-box-shadow:inset 0px 0px 0px 0px #bd7a64;
+	-webkit-box-shadow:inset 0px 0px 0px 0px #bd7a64;
+	box-shadow:inset 0px 0px 0px 0px #bd7a64;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #a6321b));
+	background:-moz-linear-gradient(top, #d0451b 5%, #a6321b 100%);
+	background:-webkit-linear-gradient(top, #d0451b 5%, #a6321b 100%);
+	background:-o-linear-gradient(top, #d0451b 5%, #a6321b 100%);
+	background:-ms-linear-gradient(top, #d0451b 5%, #a6321b 100%);
+	background:linear-gradient(to bottom, #d0451b 5%, #a6321b 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#a6321b',GradientType=0);
+	background-color:#d0451b;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:11px;
+	padding:6px 24px;
+	text-decoration:none;
+}
+.btnOrg:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #a6321b), color-stop(1, #d0451b));
+	background:-moz-linear-gradient(top, #a6321b 5%, #d0451b 100%);
+	background:-webkit-linear-gradient(top, #a6321b 5%, #d0451b 100%);
+	background:-o-linear-gradient(top, #a6321b 5%, #d0451b 100%);
+	background:-ms-linear-gradient(top, #a6321b 5%, #d0451b 100%);
+	background:linear-gradient(to bottom, #a6321b 5%, #d0451b 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6321b', endColorstr='#d0451b',GradientType=0);
+	background-color:#a6321b;
+    text-decoration:none;
+    color:white;
+}
+.btnOrg:active {
+	position:relative;
+	top:1px;
+    text-decoration:none;
+}
+
+.btnMap {
+	-moz-box-shadow:inset 0px 1px 0px 0px #29bbff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #29bbff;
+	box-shadow:inset 0px 1px 0px 0px #29bbff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2dabf9), color-stop(1, #0688fa));
+	background:-moz-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+	background:-webkit-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+	background:-o-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+	background:-ms-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+	background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2dabf9', endColorstr='#0688fa',GradientType=0);
+	background-color:#2dabf9;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:0px solid #0b0e07;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:11px;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+}
+.btnMap:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0688fa), color-stop(1, #2dabf9));
+	background:-moz-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+	background:-webkit-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+	background:-o-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+	background:-ms-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0688fa', endColorstr='#2dabf9',GradientType=0);
+	background-color:#0688fa;
+}
+.btnMap:active {
+	position:relative;
+	top:1px;
+}
+
+
+.category {
+    color:#ffffff;
+    font-size:3.5em;
+    font-family:Montserrat;
+    text-transform: uppercase;
+    border:dotted;
+    border-width:0px;
+}
+
+.keyword {
+    color:rgb(200,200,200);
+    font-size:2em;
+    font-family:Montserrat;
+    margin-bottom: 15px;
+    border:dotted;
+    border-width:0px;
+}
+
+.categoryWrapper {
+    border:dotted;
+    border-width:0px;
+    padding-top:50px;
+}
+
+.categoryContent {
+    border:dotted;
+    border-width:0px;
+}
+
+.categoryLinkWrapper{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.categoryLink{
+    height: auto; 
+    width: auto; 
+    max-width: 300px; 
+    max-height: 300px;
+    margin: 10px 10px 10px 10px;
+    -moz-box-shadow:  0px 0px 8px 0px rgb(50,50,50);
+    -webkit-box-shadow:  0px 0px 8px 0px rgb(50,50,50);
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.categoryLink:hover{
+    box-shadow:  0px 0px 25px 3px rgb(0,0,0);
+}
+
+.staticBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height:40px;
+    width:40px;
+}
+
+.formWrapper{
+    margin: 5px 5px 5px 5px;
+    border:solid;
+    border-width:0px;
+    text-align:right;
+    vertical-align:middle;
+}
+
+.formRow{
+    margin: 5px 5px 5px 5px;
+    border:solid;
+    border-width:0px;
+    font-family:Montserrat;
+    vertical-align:central;
+    text-decoration:none;
+}
+
+.formCol1{
+    margin: 5px 5px 5px 5px;
+    border:solid;
+    border-width:0px;
+    display:inline-block;
+}
+
+.formCol2{
+    margin: 5px 37% 5px 5px;
+    border:solid;
+    border-width:0px;
+    display:inline-block;
+    color:black;
+}
+
+.btnSubmit {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
+	background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
+	background-color:#ffffff;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:13px;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.btnSubmit:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));
+	background:-moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:-webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:-o-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:-ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);
+	background-color:#f6f6f6;
+}
+.btnSubmit:active {
+	position:relative;
+	top:1px;
+}
+
+
+.rdioBtn{
+    margin-left:47%;
+    text-align:left;
+}
+.mainKey{
+    text-align:center;
+    border:solid;
+    border-width:1px;
+    text-transform:uppercase;
+    display:inline-block;
+    vertical-align:central;
+    color:black;
+}
+.textKey{
+    font-size:1.5em;
+    text-transform:uppercase;
+    display:inline-block;
+    margin-right:15px;
+}

@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Maps";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Maps</h2>
+<p>@ViewBag.plc</p>
+
+<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+<script type='text/javascript'>
+    function init_map() {
+        var geocoder = new google.maps.Geocoder();
+
+        var lat;
+        var long;
+
+        var address = "@(ViewBag.plc)";
+        //var address = "taman sari";
+
+        geocoder.geocode({ 'address': address }, function (results, status) {
+            //alert("here");
+            if (status == google.maps.GeocoderStatus.OK) {
+                lat = results[0].geometry.location.lat();
+                long = results[0].geometry.location.lng();
+                var myOptions = {
+                    zoom: 15, center: new google.maps.LatLng(lat, long),
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+                marker = new google.maps.Marker({
+                    map: map,
+                    position: new google.maps.LatLng(lat, long)
+                });
+                infowindow = new google.maps.InfoWindow({ content: '<strong>Lokasi</strong><br>' + address + '<br>' });
+                google.maps.event.addListener(marker, 'click',
+                    function () {
+                        infowindow.open(map, marker);
+                    });
+                infowindow.open(map, marker);
+            } else {
+                lat = 0;
+                long = 0;
+                alert("ga ketemu");
+            }
+        });
+      
+    }
+    google.maps.event.addDomListener(window, 'load', init_map);
+
+</script>
+
+<div style='overflow:hidden;height:440px;width:700px;'>
+    <div id='gmap_canvas' style='height:440px;width:600px;'></div>
+    <style>
+        #gmap_canvas img {
+            max-width: none !important;
+            background: none !important;
+        }
+    </style>
+</div>

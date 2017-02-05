@@ -1,0 +1,77 @@
+﻿@model Homes.Models.FormModel
+
+@{
+    ViewBag.Title = "FormPage";
+}
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="formWrapper">
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="formRow" style="text-align:center">
+            @Html.LabelFor(model => model.keyword, new { @class = "textKey" })
+            <div class="mainKey" style="margin-bottom:35px">
+                @Html.EditorFor(model => model.keyword)
+                @Html.ValidationMessageFor(model => model.keyword)
+            </div>
+        </div>
+
+        <div class="formRow">
+            @Html.LabelFor(model => model.pdam1, new { @class = "formCol1" })
+            <div class="formCol2">
+                @Html.EditorFor(model => model.pdam1)
+                @Html.ValidationMessageFor(model => model.pdam1)
+            </div>
+        </div>
+
+        <div class="formRow">
+            @Html.LabelFor(model => model.disdik1, new { @class = "formCol1" })
+            <div class="formCol2">
+                @Html.EditorFor(model => model.disdik1)
+                @Html.ValidationMessageFor(model => model.disdik1)
+            </div>
+        </div>
+
+        <div class="formRow">
+            @Html.LabelFor(model => model.kebersihan1, new { @class = "formCol1" })
+            <div class="formCol2">
+                @Html.EditorFor(model => model.kebersihan1)
+                @Html.ValidationMessageFor(model => model.kebersihan1)
+            </div>
+        </div>
+
+        <div class="formRow">
+            @Html.LabelFor(model => model.kesehatan1, new { @class = "formCol1" })
+            <div class="formCol2">
+                @Html.EditorFor(model => model.kesehatan1)
+                @Html.ValidationMessageFor(model => model.kesehatan1)
+            </div>
+        </div>
+
+        <div class="formRow">
+            @Html.LabelFor(model => model.dbmp1, new { @class = "formCol1" })
+            <div class="formCol2">
+                @Html.EditorFor(model => model.dbmp1)
+                @Html.ValidationMessageFor(model => model.dbmp1)
+            </div>
+        </div>
+        <div class="rdioBtn">
+            <div>@Html.RadioButtonFor(model => model.pil1, "BM") Bayer-Moore</div>
+            <div>@Html.RadioButtonFor(model => model.pil1, "KMP") Knuth-Morris-Path</div>
+
+        </div>
+
+        <div class="formRow" style="text-align:center">
+                <a href="Index"><input type="submit" value="Analize" class="btnSubmit" /></a>
+        </div>
+    </div>
+}
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

@@ -1,0 +1,105 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<meta charset="utf-8" />
+<title>ITInvent Meny</title>
+<script type="text/javascript" src="/Scripts/jquery-2.2.3.min.js"></script>
+<script type="text/javascript">
+    {
+        var hide = [true];
+        for (var i = 0 ; i < @ViewBag.nTweet; i++) {
+            hide[i] = true;
+        }
+        $(document).ready(function () {
+            var i;
+            for (i = 0; i < @ViewBag.nTweet; i++) {
+                //alert(i);
+                $('#map-btn' + i)[0].addEventListener('click', redirect, false);
+                $('#map-content' + i).toggle('fast');
+            }
+        });
+
+        function redirect() {
+            var tmp = this.id.substring(7, this.id.length);
+            var i = parseInt(tmp);
+            hide[i] = !hide[i];
+            alert(this.id);
+            $('#map-btn' + i).attr({ value: (hide[i] ? 'SHOW LOCATION FOUND' : 'HIDE LOCATION FOUND') })
+            $('#map-content' + tmp).toggle('fast');
+        }
+    }
+</script>
+
+<div class="categoryLinkWrapper" id="catlink">
+    <div class="category" style="font-size:4em">Kategori</div>
+    <a href="#category0"><img src="~/img/pdam.png" class="categoryLink" /></a>
+    <a href="#category1"><img src="~/img/disdik.png" class="categoryLink" /></a>
+    <a href="#category2"><img src="~/img/dkb.png" class="categoryLink" /></a>
+    <a href="#category3"><img src="~/img/diskes.png" class="categoryLink" /></a>
+    <a href="#category4"><img src="~/img/dbmp.png" class="categoryLink" /></a>
+    <a href="#category5"><img src="~/img/unknown.png" class="categoryLink" /></a>
+</div>
+
+
+@for (int cat = 0; cat < 6; cat++)
+{
+    <div class="categoryWrapper" id="@("category"+cat)">
+        @if (cat < 5)
+        {
+            <div class="category">Kategori @(cat + 1) : @ViewBag.ct.name[cat]</div>
+            <div class="keyword">Keyword : @ViewBag.key[cat]</div>
+        }
+        else
+        {
+            <div class="category">unknown category</div>
+        }
+        <div class="categoryContent">
+            @for (int i = 0; i < @ViewBag.twit.Length; i++)
+            {
+                if ((cat < 5 && ViewBag.twit[i].category == (cat + 1)) || (cat == 5 && @ViewBag.twit[i].category == -1))
+                {
+                    <div class="twitWrapper">
+                        <div class="twitContentWrapper">
+                            <div class="twitImageWrapper">
+                                <img src="@ViewBag.twit[i].photoURL" alt="Smiley face" class="twitImage">
+                            </div>
+                            <div class="twitBodyWrapper">
+                                <div class="twitHeadWrapper">
+                                    <div class="twitUFullNameWrapper">
+                                        <div class="twitFullName">@ViewBag.twit[i].userName</div>
+                                    </div>
+                                    <div class="twitUNameWrapper"><a href="http://twitter.com/@ViewBag.twit[i].userID" class="twituName">&#64;@ViewBag.twit[i].userID</a></div>
+                                </div>
+                                <div class="twitTextWrapper">
+                                    <p class="twitText">
+                                        @Html.Raw(@ViewBag.twit[i].text)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="twitTailWrapper">
+                            <input type="button" id="@("map-btn" + i)" value="SHOW LOCATION FOUND" class="btnMap" />
+                            <a href="http://twitter.com/@ViewBag.twit[i].userID/status/@ViewBag.twit[i].tweetID" class="btnOrg" target="popup" onclick="window.open('http://twitter.com/@ViewBag.twit[i].userID/status/@ViewBag.twit[i].tweetID','name','width=750,height=600')">SHOW ORIGINAL</a>
+                            <section id="@("map-content"+i)">
+                                @if (ViewBag.twit[i].namaTempat != "")
+                                {
+                                    <div class="twitText" style="text-align:center">Tempat ditemukan = @ViewBag.twit[i].namaTempat</div>
+                                    <a href="Maps?place=@ViewBag.twit[i].namaTempat" target="popup" onclick="window.open('Maps?place=@ViewBag.twit[i].namaTempat','name','width=650,height=800')">Open maps in new Windows</a>
+                                }
+                                else
+                                {
+                                    <div class="twitText" style="text-align:center">Tidak ada nama tempat ditemukan</div>
+                                }
+                            </section>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>  
+    <a href="#catlink">
+        <img src="~/img/upbtn.png" class="staticBtn"/>
+    </a>
+
+}
